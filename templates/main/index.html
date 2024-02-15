@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Coventry Scholars: Home</title>
+{% endblock %}
+
+{% block content %}
+    <section class="container">
+        <div class="col-md-6 mt-4">
+            <h2 class="fw-bold">Coventry Scholar</h2>
+            <form class="mt-4" method="post" action="/">
+                <span>Select Alogrithm :</span>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="algorithm" id="inlineRadio1" value="and" checked>
+                    <label class="form-check-label" for="inlineRadio1">AND</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="algorithm" id="inlineRadio2" value="or">
+                    <label class="form-check-label" for="inlineRadio2">OR</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="algorithm" id="inlineRadio3" value="tfidf">
+                    <label class="form-check-label" for="inlineRadio3">TF-IDF</label>
+                </div>
+                <div class="input-group gap-3 mt-2">
+                    <input type="text" name='query' class="form-control form-control-lg" placeholder="Search Papers ...">
+                    <button class="btn btn-lg btn-primary" type="submit">Search</button>
+               </div>
+            </form>
+        </div>
+    </section>
+{% endblock %}
